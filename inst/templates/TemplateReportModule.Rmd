@@ -1,0 +1,63 @@
+---
+title: <center>AMARETTO Regulatory Module `r toString(ModuleNr)` Report</center>
+output: 
+  html_document:
+    theme: cerulean
+    highlight: NULL
+---
+
+<style>
+  .main-container {
+    max-width:  100% !important;
+    padding-right: 1% !important;
+    padding-left: 1% !important;
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+  }
+</style>
+
+<center>
+<br><br>
+<a href="../index.html"><button type="button"  class="btn btn-primary">Index Page</button></a>
+<br><br>
+
+## Regulatory Module Heatmap Visualization
+<br><br><br>
+```{r moduleheatmap, echo=FALSE, fig.height = 12, fig.width = 16, fig.align = "center"}
+heatmap_module
+```
+<br><br><br>
+
+## Activator and Repressor Driver Genes in Regulatory Module
+<br><br><br>
+```{r regulators, echo=FALSE}
+dt_regulators
+```
+<br><br><br>
+
+## Target Genes in Regulatory Module
+<br><br><br>
+```{r targets, echo=FALSE}
+dt_targets
+```
+<br><br><br>
+
+## Enrichments of Functional Categories in Regulatory Module
+<br><br><br>
+```{r geneset, echo=FALSE,out.width='25%'}
+dt_genesets
+```
+
+<br><br><br>
+<!--
+## Associations of Phenotypes to Regulatory Module
+
+<br><br><br>
+
+```{r module_Phenotypes,echo=FALSE}
+module_phenotype_association_datatable
+```
+
+<br><br><br>
+-->
+</center>
